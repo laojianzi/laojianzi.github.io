@@ -23,10 +23,11 @@ projects:
   #   - stars
   limit: 9
   exclude:
-    archived: false
+    archived: true
     forks: true
     projects:
-    # - repo-name
+      - read-note-comments
+      - gocover-cui
 
 social_media:
   # behance: your_username
