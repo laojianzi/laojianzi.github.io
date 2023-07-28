@@ -13,7 +13,7 @@ paginate = 5
   contentTypeName = "posts"
 
   # OS theme is default when not provided, but you can force it to "light" or "dark"
-  defaultTheme = "dark"
+  defaultTheme = "light"
 
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 2
@@ -32,8 +32,8 @@ paginate = 5
 [languages]
   [languages.zh]
     languageCode = "zh"
-    title = "Hello Friend"
-    subtitle = "A simple theme for Hugo"
+    title = "老健仔"
+    subtitle = "接受那些平凡"
     keywords = ""
     copyright = ""
     menuMore = "Show more"
@@ -49,7 +49,7 @@ paginate = 5
     # lastModDisplay = ""
 
     [languages.zh.params.logo]
-      logoText = "hello friend"
+      logoText = "老/健/仔"
       logoHomeLink = "/"
     # or
     #
