@@ -16,7 +16,7 @@ paginate = 5
   defaultTheme = "light"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 2
+  showMenuItems = 5
 
   # Show reading time in minutes for posts
   showReadingTime = false
@@ -29,6 +29,20 @@ paginate = 5
   #(default is Description or Summary metadata in the front matter)
   # rssFullText = true
 
+  # Enable comments
+  comments = true
+  [params.comment]
+    repo = "laojianzi/laojianzi.github.io"
+    repoId = "R_kgDOKAsHbw"
+    category = "Announcements"
+    categoryId = "DIC_kwDOKAsHb84CYMJ9"
+    mapping = "title"
+    strict = "0"
+    reactionsEnabled = "1"
+    emitMetadata = "0"
+    inputPosition = "top"
+    lang = "zh-CN"
+    crossorigin = "anonymous"
 [languages]
   [languages.zh]
     languageCode = "zh"
@@ -66,6 +80,6 @@ paginate = 5
         name = "About"
         url = "/about"
       [[languages.zh.menu.main]]
-        identifier = "showcase"
-        name = "Showcase"
-        url = "/showcase"
+        identifier = "github"
+        name = "GitHub"
+        url = "https://github.com/laojianzi"

@@ -1,7 +1,15 @@
-<!--
-To add comments section, please create `layouts/partials/comments.html` in your
-Hugo directory and insert:
-
-{{ template "_internal/disqus.html" . }}
-
-or whatever comment engine you want -> https://gohugo.io/content-management/comments/#readout -->
+<script src="https://giscus.app/client.js"
+        data-repo="{{ print $.Site.Params.Comment.Repo }}"
+        data-repo-id="{{ print $.Site.Params.Comment.RepoId }}"
+        data-category="{{ print $.Site.Params.Comment.Category }}"
+        data-category-id="{{ print $.Site.Params.Comment.CategoryId }}"
+        data-mapping="{{ print $.Site.Params.Comment.Mapping }}"
+        data-strict="{{ print $.Site.Params.Comment.Strict }}"
+        data-reactions-enabled="{{ print $.Site.Params.Comment.ReactionsEnabled }}"
+        data-emit-metadata="{{ print $.Site.Params.Comment.EmitMetadata }}"
+        data-input-position="{{ print $.Site.Params.Comment.InputPosition }}"
+        data-theme="{{ $.Site.Params.Comment.Theme | default $.Site.Params.defaultTheme }}"
+        data-lang="{{ print $.Site.Params.Comment.Lang }}"
+        crossorigin="{{ print $.Site.Params.Comment.Crossorigin }}"
+        async>
+</script>
