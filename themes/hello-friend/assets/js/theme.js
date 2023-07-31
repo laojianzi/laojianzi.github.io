@@ -28,4 +28,4 @@ themeToggle.addEventListener("click", () => {
       "theme",
       document.body.classList.contains("dark-theme") ? "dark-theme" : "light-theme",
     );
-});
+}, true);

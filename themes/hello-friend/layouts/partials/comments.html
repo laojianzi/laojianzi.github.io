@@ -13,3 +13,31 @@
         crossorigin="{{ print $.Site.Params.Comment.Crossorigin }}"
         async>
 </script>
+
+{{ with eq $.Site.Params.Comment.Theme nil }}
+<script>
+  function getGiscusTheme() {
+    const theme = window.localStorage.getItem("theme");
+    const giscusTheme = theme === "dark-theme" ? "dark" : "light";
+    return giscusTheme;
+  }
+
+  function setGiscusTheme(theme) {
+    function sendMessage(message) {
+      const iframe = document.querySelector('iframe.giscus-frame');
+      if (!iframe) return;
+      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+    }
+    sendMessage({setConfig: {theme: theme}});
+  }
+
+  // requre giscus iframe loaded
+  window.onload = function() {
+    setGiscusTheme(getGiscusTheme());
+  }
+
+  document.querySelector(".theme-toggle").addEventListener("click", () => {
+    setGiscusTheme(getGiscusTheme());
+  });
+</script>
+{{ end }}
