@@ -2,6 +2,4 @@
 framed = true
 +++
 
-## Hello
-
-![Hello!](https://blog.jetbrains.com/wp-content/uploads/2021/02/Go_8001611039611515.gif)
+🆒 Thank you, porkbun.com, for the free one-year 0xbb.dev domain name!
