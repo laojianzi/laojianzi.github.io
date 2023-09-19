@@ -2,7 +2,7 @@
 title = "为什么我觉得 labstack/echo 好用？"
 date = "2023-09-05"
 author = "Jeff"
-cover = "https://echo.labstack.com/assets/images/terminal-6c7d48f3f4012a643e3e5a49b23e9308.png"
+cover = "https://image.0xbb.dev/2023/09/202309191939866.png"
 description = "在新手刚使用这两个库的时候，在 `HandlerFunc` 这一层上我觉得 echo 做的会好一些，它可以帮助新手避免一些 return 问题。"
 +++
 
