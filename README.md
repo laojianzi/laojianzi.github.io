@@ -1,10 +1,8 @@
-+++
-title = "{{ replace .Name "-" " " | title }}"
-date = "{{ .Date.Format "2006-01-02" }}"
-author = "Jeff"
-cover = "add image"
-description = "add desc"
-+++
+# blog.0xbb.dev
+
+- 随便写点
+- 尝试翻译些内容
+- 尝试输出些总结
 
 ## 转载
 

@@ -1,18 +1,18 @@
 +++
-title = "Echo - 快速开始"
+title = "【文档翻译】Echo - 快速开始"
 date = "2023-09-17"
 author = "Jeff"
 cover = "https://image.0xbb.dev/2023/09/quick-start-echo.jpeg"
 description = "一文教你如何快速开始使用 Echo"
 +++
 
+翻译自 Echo 文档 [Quick Start](https://echo.labstack.com/docs/quick-start)
+
 ## 安装
 ### 要求
-建议安装 Echo [Go](https://go.dev/doc/install) 1.13 或更高版本。
+安装 Echo 需要 [Go](https://go.dev/doc/install) 1.13 或更高版本，Go 1.12 支持有限，某些中间件无法使用。
 
-Go 1.12 的支持有限，一些 middleware 中间件将不可用。
-
-确保您的项目文件夹位于 $GOPATH 之外。
+确保您的项目文件夹位于 $GOPATH 以外。
 
 ```shell
 $ mkdir myapp && cd myapp
@@ -238,3 +238,7 @@ e.GET("/users", func(c echo.Context) error {
     return c.String(http.StatusOK, "/users")
 }, track)
 ```
+
+## 转载
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />本<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" rel="dct:type">作品</span>由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/laojianzi/laojianzi.github.io" property="cc:attributionName" rel="cc:attributionURL">Jeff</a> 创作，采用<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">知识共享署名 4.0 国际许可协议</a>进行许可。
