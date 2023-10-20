@@ -61,13 +61,13 @@ externalAccess:
       - ip3
 ```
 
-helm install 之后，k8s service **可能**会创建 3 个 LoadBalancer 的 external service，而且 external service 的 IP 会跟你配置的 `loadBalancerIPs` 不同，所以你应该删除这 3 个 LoadBalancer 的 external servic。
+helm install 之后，k8s service **可能**会创建 3 个 LoadBalancer 的 external service，而且 external service 的 IP 会跟你配置的 `loadBalancerIPs` 不同，所以你应该删除这 3 个 LoadBalancer 的 external service。
 
-如果你不想手动创建 k8s lb service，你可以先用 helm install 自动创建的 k8s lb service IP 然后用域名解析，然后 helm values 改用 `loadBalancerNames`。
+如果你不想手动创建 k8s lb service，你可以先用 `loadBalancerNames` 配置好域名，不解析 IP，helm install 自动创建的 k8s lb service 得到 IP 之后再做域名解析即可。
 
 为什么用域名？
 
-- 防止 LB 故障，你还是得改客户端配置，有了域名你就可以解析到新的 Lb IP 解决问题
+- 防止 LB 故障，你还是得改客户端配置，有了域名你就可以解析到新的 LB IP 解决问题
 - 可以做到 3 个域名绑定到一个 LB 上适当降低成本
 
 ## 尝试用一个 LB
@@ -98,4 +98,4 @@ bitnami/kafka 提供了 3 中外部访问的配置方式，我们可以根据不
 
 - 测试环境或者客户端少的情况下我们可以选择使用 NodePort
 - 使用 LoadBalancer 可以让我们在客户端多的情况下做到故障快速恢复
-- 利用域名可以降低 LB 数量并且与 IP 解藕
+- 利用域名可以降低 LB 数量、与 IP 解藕
